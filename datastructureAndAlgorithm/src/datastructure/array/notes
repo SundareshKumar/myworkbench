@@ -1,0 +1,17 @@
+Advantages of using arrays:
+
+    Arrays allow random access of elements. This makes accessing elements by position faster.
+	Arrays have better cache locality that can make a pretty big difference in performance.
+	It is used to represent multiple data items of same type by using only single name.
+	It can be used to implement other data structures like linked lists, stacks, queues, trees, graphs etc.
+	2D arrays are used to represent matrices.
+
+
+
+DisAdvantages of Using array :
+
+	We must know in advance that how many elements are to be stored in array.
+	Array is static structure. It means that array is of fixed size. The memory which is allocated to array can not be increased or reduced.
+	Since array is of fixed size, if we allocate more memory than requirement then the memory space will be wasted. And if we allocate less memory than requirement, then it will create problem.
+	The elements of array are stored in consecutive memory locations. So insertions and deletions are very difficult and time consuming.
+	
