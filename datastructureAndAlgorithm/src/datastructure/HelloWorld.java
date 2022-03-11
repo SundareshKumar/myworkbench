@@ -44,4 +44,36 @@ public class HexToASCIIExample {
 	      System.out.println("ASCII = " + ascii);
 	      System.out.println("Hex = " + builder.toString());
 	}
+	
+		public static void main(String[] args) {
+
+		try {
+
+			System.out.println("Encode bit-map to ASCII");
+			List resultList = new ArrayList();
+			for (int j = 0; j < fullMask.length; j++) {
+				String s = getHexString(fullMask[j]).toUpperCase();
+				System.out.println((new StringBuilder()).append("Encoded byte (DEC)").append(Byte.toString(fullMask[j]))
+						.append(" or (HEX)").append(getHexString(fullMask[j]).toUpperCase()).append(" to ASCII-codes: ")
+						.append(Byte.toString((byte) s.charAt(0))).append(", ")
+						.append(Byte.toString((byte) s.charAt(1))).toString());
+				
+				
+				resultList.add(Byte.valueOf((byte) s.charAt(0)));
+				resultList.add(Byte.valueOf((byte) s.charAt(1)));
+			}
+
+			byte resultFullMask[] = new byte[resultList.size()];
+			for (int k = 0; k < resultList.size(); k++)
+				resultFullMask[k] = ((Byte) resultList.get(k)).byteValue();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+	public static String getHexString(byte b) {
+		return Integer.toString((b & 0xff) + 256, 16).substring(1);
+	}
 }
